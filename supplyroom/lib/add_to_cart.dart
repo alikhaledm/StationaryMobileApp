@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:supplyroom/appbar.dart';
+import 'checkout.dart';
 
 class Cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Products"),
-      ),
+      appBar: CustomAppBar(),
       body: Container(
         color: Colors.white,
         padding: EdgeInsets.all(16.0),
@@ -23,8 +23,8 @@ class Cart extends StatelessWidget {
                   children: <Widget>[
                     Image.asset(
                       'assets/images/pencils.jpg',
-                      width: 120,
-                      height: 120,
+                      width: 75,
+                      height: 75,
                       fit: BoxFit.cover,
                     ),
                     SizedBox(width: 10),
@@ -73,8 +73,8 @@ class Cart extends StatelessWidget {
                   children: <Widget>[
                     Image.asset(
                       'assets/images/notebook.jpeg',
-                      width: 120,
-                      height: 120,
+                      width: 75,
+                      height: 75,
                       fit: BoxFit.cover,
                     ),
                     SizedBox(width: 10),
@@ -113,7 +113,7 @@ class Cart extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 400),
+            SizedBox(height: 150),
             Center(
               child: Text(
                 'Total: \$160',
@@ -121,6 +121,19 @@ class Cart extends StatelessWidget {
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CheckoutPage()),
+                );
+              },
+              child: Text('Checkout'),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(
+                    Color.fromARGB(255, 108, 128, 94)),
               ),
             ),
           ],

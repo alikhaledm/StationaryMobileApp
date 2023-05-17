@@ -1,0 +1,4 @@
+#Wed May 17 06:49:07 EET 2023
+base.0=E\:\\Academic\\UNI\\SEM 8\\Mobile Commerce\\App\\StationaryMobileApp\\supplyroom\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
